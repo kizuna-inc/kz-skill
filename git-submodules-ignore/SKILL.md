@@ -1,5 +1,5 @@
 ---
-name: ignore-submodules
+name: git-submodules-ignore
 author: kizuna-inc
 description: Enforces read-only access to Git submodules in this repository. Use this skill whenever a task involves editing, creating, deleting, or otherwise writing to files inside a Git submodule directory (as defined in .gitmodules), or whenever it's unclear if a target path belongs to the root repo or a submodule. Always consult this skill before any write/edit/delete operation (replace_file_content, multi_replace_file_content, write_to_file, shell commands like rm/mv/sed -i, etc.) touches a path that could be inside a submodule.
 license: MIT
