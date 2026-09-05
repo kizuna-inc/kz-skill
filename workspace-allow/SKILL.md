@@ -1,3 +1,16 @@
+---
+name: workspace-allow
+author: kizuna-inc
+description: Enforces full agent autonomy within the target workspace directory while requiring explicit user confirmation for any actions targeting paths or systems outside the folder.
+license: MIT
+version: "1.0.0"
+tags:
+  - git
+  - workspace
+  - safety
+  - file-system
+---
+
 # Skill: Scoped Directory Operations & Workspace Boundary Enforcement
 
 ## Scope Boundary
