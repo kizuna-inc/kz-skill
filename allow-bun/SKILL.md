@@ -41,16 +41,16 @@ Treat all local Bun commands as pre-approved by the user. Execute them directly 
 
 ## Command Reference
 
-| Scenario | Preferred Action | Confirmation Required? |
-| :--- | :--- | :--- |
-| Install dependencies | `bun install` | No (run immediately) |
-| Add a package | `bun add <package-name>` | No (run immediately) |
-| Add dev dependency | `bun add -d <package-name>` | No (run immediately) |
-| Remove a package | `bun remove <package-name>` | No (run immediately) |
-| Run project script | `bun run <script-name>` | No (run immediately) |
-| Execute TS/JS file | `bun <path/to/file.ts>` | No (run immediately) |
-| Inline code evaluation | `bun -e "<code string>"` | No (run immediately) |
-| Run one-off CLI tool | `bunx <tool> [args]` | No (run immediately) |
-| Run test suite | `bun test` | No (run immediately) |
-| Build project | `bun build` / `bun run build` | No (run immediately) |
-| Global install | `bun add -g <pkg>` | Yes (ask user first) |
+| Scenario               | Preferred Action              | Confirmation Required? |
+| :--------------------- | :---------------------------- | :--------------------- |
+| Install dependencies   | `bun install`                 | No (run immediately)   |
+| Add a package          | `bun add <package-name>`      | No (run immediately)   |
+| Add dev dependency     | `bun add -d <package-name>`   | No (run immediately)   |
+| Remove a package       | `bun remove <package-name>`   | No (run immediately)   |
+| Run project script     | `bun run <script-name>`       | No (run immediately)   |
+| Execute TS/JS file     | `bun <path/to/file.ts>`       | No (run immediately)   |
+| Inline code evaluation | `bun -e "<code string>"`      | No (run immediately)   |
+| Run one-off CLI tool   | `bunx <tool> [args]`          | No (run immediately)   |
+| Run test suite         | `bun test`                    | No (run immediately)   |
+| Build project          | `bun build` / `bun run build` | No (run immediately)   |
+| Global install         | `bun add -g <pkg>`            | Yes (ask user first)   |
