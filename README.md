@@ -8,6 +8,12 @@ Skills are plug-in instruction sets for the Antigravity AI coding assistant. Eac
 
 ## Available Skills
 
+| Skill | Slash Command / Trigger | Description | Version |
+| :--- | :--- | :--- | :--- |
+| [`released-bump`](./released-bump/SKILL.md) | `/release-bump`, `/released-bump`, `/release` | Bump version, generate release notes from rules, create Git tag, and publish GitHub release with export folder artifacts | `1.0.0` |
+| [`workspace-allow`](./workspace-allow/SKILL.md) | Autonomous / Boundary | Enforces full agent autonomy within workspace directory while requiring explicit confirmation for external paths | `1.0.0` |
+| [`auto-mode`](./auto-mode/SKILL.md) | `/auto-mode` | Enables auto mode for antigravity tool, allowing automatic execution without interactive prompts. | `1.0.0` |
+
 For the complete list and detailed documentation of all available skills, see the [Skill Index](skill_index.md).
 
 All individual skills live in their own directory containing a `SKILL.md` runbook.

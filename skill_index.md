@@ -8,10 +8,11 @@ Each skill lives in its own directory containing a `SKILL.md` instruction file w
 
 ## Skills Overview
 
-| Skill | Slash Command / Trigger | Description | Version |
-| :--- | :--- | :--- | :--- |
-| [`released-bump`](./released-bump/SKILL.md) | `/release-bump`, `/released-bump`, `/release` | Bump version, generate release notes from rules, create Git tag, and publish GitHub release with export folder artifacts | `1.0.0` |
-| [`workspace-allow`](./workspace-allow/SKILL.md) | Autonomous / Boundary | Enforces full agent autonomy within workspace directory while requiring explicit confirmation for external paths | `1.0.0` |
+| Skill                                           | Slash Command / Trigger                       | Description                                                                                                              | Version |
+| :---------------------------------------------- | :-------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- | :------ |
+| [`released-bump`](./released-bump/SKILL.md)     | `/release-bump`, `/released-bump`, `/release` | Bump version, generate release notes from rules, create Git tag, and publish GitHub release with export folder artifacts | `1.0.0` |
+| [`workspace-allow`](./workspace-allow/SKILL.md) | Autonomous / Boundary                         | Enforces full agent autonomy within workspace directory while requiring explicit confirmation for external paths         | `1.0.0` |
+| [`auto-mode`](./auto-mode/SKILL.md)             | `/auto-mode`                                  | Enables auto mode for antigravity tool, allowing automatic execution without interactive prompts.                        | `1.0.0` |
 
 ---
 
@@ -37,6 +38,17 @@ Each skill lives in its own directory containing a `SKILL.md` instruction file w
 - **Key Guidelines & Capabilities**:
   - **In-Scope Autonomy**: Allows editing, reading, deleting, and building within `./` without prompting for confirmation.
   - **Out-of-Scope Protection**: Halts and prompts with a structured confirmation warning if an action references absolute paths outside the repo, parent directory traversals (`../`), or global package managers.
+
+### 3. [Auto Mode for Antigravity (`auto-mode`)](./auto-mode/SKILL.md)
+- **Directory**: [`auto-mode/`](./auto-mode/)
+- **Instruction File**: [`auto-mode/SKILL.md`](./auto-mode/SKILL.md)
+- **Slash Commands**: `/auto-mode`
+- **Description**: Enables auto mode for antigravity tool, allowing automatic execution without interactive prompts. Configure via global or project config file.
+- **Key Guidelines & Capabilities**:
+  - **Scope Selection**: Choose `--global` for user‑wide setting or `--project` (default) for repository‑local config.
+  - **Config Management**: Writes a simple INI file (`[antigravity]\nauto_mode = true`) or removes it with `--reset`.
+  - **Verification**: Confirms file creation and content, optionally checks for antigravity availability.
+  - **Reset Option**: Cleanly removes the auto‑mode flag.
 
 ---
 
